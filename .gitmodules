@@ -1,0 +1,3 @@
+[submodule "packages/util"]
+	path = packages/util
+	url = https://github.com/uioz/monorepo-node.git

@@ -1,0 +1,12 @@
+lockfileVersion: 5.3
+
+importers:
+
+  .:
+    specifiers: {}
+
+  entry:
+    specifiers:
+      monorepo-util: workspace:^1.0.0
+    dependencies:
+      monorepo-util: link:../packages/util
