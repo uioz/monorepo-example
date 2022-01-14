@@ -1,14 +1,22 @@
 {
-  "name": "monorepo-entry",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.mjs",
+  "name": "vue-project",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "monorepo-util": "^1.0.0"
+    "monorepo-util": "^1.0.0",
+    "vue": "^3.2.26",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.17",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "typescript": "~4.5.4",
+    "vite": "^2.7.7",
+    "vue-tsc": "^0.29.8"
   }
 }
