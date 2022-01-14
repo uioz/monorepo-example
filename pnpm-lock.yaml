@@ -7,6 +7,18 @@ importers:
 
   entry:
     specifiers:
-      monorepo-util: workspace:^1.0.0
+      monorepo-util: ^1.0.0
     dependencies:
       monorepo-util: link:../packages/util
+
+  packages/util:
+    specifiers:
+      add: ^2.0.6
+    dependencies:
+      add: 2.0.6
+
+packages:
+
+  /add/2.0.6:
+    resolution: {integrity: sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=}
+    dev: false

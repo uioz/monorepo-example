@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "monorepo-util": "workspace:^1.0.0"
+    "monorepo-util": "^1.0.0"
   }
 }
