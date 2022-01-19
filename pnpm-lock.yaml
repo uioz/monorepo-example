@@ -7,6 +7,7 @@ importers:
 
   entry:
     specifiers:
+      '@originjs/vite-plugin-federation': ^1.1.0
       '@types/node': ^16.11.17
       '@vitejs/plugin-vue': ^2.0.1
       monorepo-util: ^1.0.0
@@ -20,6 +21,7 @@ importers:
       vue: 3.2.26
       vue-router: 4.0.12_vue@3.2.26
     devDependencies:
+      '@originjs/vite-plugin-federation': 1.1.0
       '@types/node': 16.11.19
       '@vitejs/plugin-vue': 2.0.1_vite@2.7.12+vue@3.2.26
       typescript: 4.5.4
@@ -66,6 +68,14 @@ packages:
 
   /@emmetio/scanner/1.0.0:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
+    dev: true
+
+  /@originjs/vite-plugin-federation/1.1.0:
+    resolution: {integrity: sha512-VZmbOnFEmSLW5DeypWyWxErfuCsHqh6kVbMffga3aFVQlqJWZ9liKdk73EPbxVmNMNGetImt+HKHQY/xYxdVWA==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      estree-walker: 1.0.1
+      magic-string: 0.25.7
     dev: true
 
   /@types/node/16.11.19:
@@ -482,6 +492,10 @@ packages:
       esbuild-windows-arm64: 0.13.15
     dev: true
 
+  /estree-walker/1.0.1:
+    resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
+    dev: true
+
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
@@ -588,7 +602,6 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
-    dev: false
 
   /nanoid/3.1.32:
     resolution: {integrity: sha512-F8mf7R3iT9bvThBoW4tGXhXFHCctyCiUUPrWF8WaTqa3h96d9QybkSeba43XVOOE3oiLfkVDe4bT8MeGmkrTxw==}
@@ -751,7 +764,6 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
-    dev: false
 
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}

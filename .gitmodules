@@ -1,3 +1,6 @@
 [submodule "packages/util"]
 	path = packages/util
 	url = https://github.com/uioz/monorepo-node.git
+[submodule "packages/vue-component"]
+	path = packages/vue-component
+	url = https://github.com/uioz/monorepo-vue-component.git
