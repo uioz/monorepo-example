@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, defineAsyncComponent } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
 import { add } from "monorepo-util";
@@ -11,6 +11,10 @@ let result = ref(0);
 function handleAddClick() {
   result.value = add(value1.value, value2.value);
 }
+
+const MonorepoVueComponent = defineAsyncComponent(
+  () => import("MonorepoVueComponent/app")
+);
 </script>
 
 <template>
@@ -24,7 +28,7 @@ function handleAddClick() {
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="You did it" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -36,6 +40,7 @@ function handleAddClick() {
         <button @click="handleAddClick">add</button>
       </div>
       <div>结果: {{ result }}</div>
+      <MonorepoVueComponent></MonorepoVueComponent>
     </div>
   </header>
 
