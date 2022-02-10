@@ -7,26 +7,38 @@ importers:
 
   entry:
     specifiers:
-      '@originjs/vite-plugin-federation': ^1.1.0
-      '@types/node': ^16.11.17
-      '@vitejs/plugin-vue': ^2.0.1
+      css-loader: ^6.5.1
+      html-webpack-plugin: ^5.5.0
+      mini-css-extract-plugin: ^2.5.2
       monorepo-util: ^1.0.0
+      style-loader: ^3.3.1
+      ts-loader: ^9.2.6
       typescript: ~4.5.4
       vite: ^2.7.7
       vue: ^3.2.26
+      vue-loader: ^17.0.0
       vue-router: ^4.0.12
       vue-tsc: ^0.29.8
+      webpack: ^5.66.0
+      webpack-cli: ^4.9.1
+      webpack-dev-server: ^4.7.3
     dependencies:
       monorepo-util: link:../packages/util
       vue: 3.2.26
       vue-router: 4.0.12_vue@3.2.26
     devDependencies:
-      '@originjs/vite-plugin-federation': 1.1.0
-      '@types/node': 16.11.19
-      '@vitejs/plugin-vue': 2.0.1_vite@2.7.12+vue@3.2.26
+      css-loader: 6.5.1_webpack@5.66.0
+      html-webpack-plugin: 5.5.0_webpack@5.66.0
+      mini-css-extract-plugin: 2.5.2_webpack@5.66.0
+      style-loader: 3.3.1_webpack@5.66.0
+      ts-loader: 9.2.6_typescript@4.5.4+webpack@5.66.0
       typescript: 4.5.4
       vite: 2.7.12
+      vue-loader: 17.0.0_webpack@5.66.0
       vue-tsc: 0.29.8_typescript@4.5.4
+      webpack: 5.66.0_webpack-cli@4.9.1
+      webpack-cli: 4.9.1_ad725fab8cb7e49fac502828bebe26bc
+      webpack-dev-server: 4.7.3_webpack-cli@4.9.1+webpack@5.66.0
 
   packages/util:
     specifiers:
@@ -117,14 +129,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
-    dev: true
-
-  /@originjs/vite-plugin-federation/1.1.0:
-    resolution: {integrity: sha512-VZmbOnFEmSLW5DeypWyWxErfuCsHqh6kVbMffga3aFVQlqJWZ9liKdk73EPbxVmNMNGetImt+HKHQY/xYxdVWA==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      estree-walker: 1.0.1
-      magic-string: 0.25.7
     dev: true
 
   /@types/body-parser/1.19.2:
@@ -245,17 +249,6 @@ packages:
     resolution: {integrity: sha512-NOn5eIcgWLOo6qW8AcuLZ7G8PycXu0xTxxkS6Q18VWFxgPUSOwV0pBj2a/4viNZVu25i7RIB7GttdkAIUUXOOg==}
     dependencies:
       '@types/node': 16.11.19
-    dev: true
-
-  /@vitejs/plugin-vue/2.0.1_vite@2.7.12+vue@3.2.26:
-    resolution: {integrity: sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      vite: ^2.5.10
-      vue: ^3.2.25
-    dependencies:
-      vite: 2.7.12
-      vue: 3.2.26
     dev: true
 
   /@volar/code-gen/0.29.8:
@@ -1480,10 +1473,6 @@ packages:
     engines: {node: '>=4.0'}
     dev: true
 
-  /estree-walker/1.0.1:
-    resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
-    dev: true
-
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
@@ -2146,6 +2135,7 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: false
 
   /media-typer/0.3.0:
     resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=}
@@ -2971,6 +2961,7 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+    dev: false
 
   /spdy-transport/3.0.0:
     resolution: {integrity: sha512-hsLVFE5SjA6TCisWeJXFKniGGOpBgMLmerfO2aCyCU5s7nJ/rpAepqmFifv/GCbSbueEeAJJnmSQ2rKC/g8Fcw==}
@@ -3147,6 +3138,21 @@ packages:
 
   /token-stream/1.0.0:
     resolution: {integrity: sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=}
+    dev: true
+
+  /ts-loader/9.2.6_typescript@4.5.4+webpack@5.66.0:
+    resolution: {integrity: sha512-QMTC4UFzHmu9wU2VHZEmWWE9cUajjfcdcws+Gh7FhiO+Dy0RnR1bNz0YCHqhI0yRowCE9arVnNxYHqELOy9Hjw==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      typescript: '*'
+      webpack: ^5.0.0
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 5.8.3
+      micromatch: 4.0.4
+      semver: 7.3.5
+      typescript: 4.5.4
+      webpack: 5.66.0_webpack-cli@4.9.1
     dev: true
 
   /tslib/2.3.1:
